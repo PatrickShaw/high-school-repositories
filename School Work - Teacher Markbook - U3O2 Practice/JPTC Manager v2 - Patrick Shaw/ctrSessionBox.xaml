@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ctrSessionBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignWidth="180" d:DesignHeight="104.5" >
+    <UserControl.Resources>
+        <ResourceDictionary Source="Styles.xaml"/>
+    </UserControl.Resources>
+    <Grid x:Name="grdMain" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+        <Rectangle x:Name="rctMain" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Fill="White"></Rectangle>
+        <TextBlock x:FieldModifier="Public" VerticalAlignment="Center" HorizontalAlignment="Stretch" TextAlignment="Center" x:Name="txbInfo" Text="" Margin="0,10,0,10" FontSize="16"  TextWrapping="Wrap"  FontWeight="Bold">
+
+        </TextBlock>
+        <Rectangle x:Name="rctOverlay" Margin="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"></Rectangle>
+    </Grid>
+</UserControl>

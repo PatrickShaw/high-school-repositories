@@ -1,0 +1,32 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainWindow" Height="572.387" Width="648.284">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="9*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="445*"/>
+        </Grid.RowDefinitions>
+        <ListBox HorizontalAlignment="Left" Height="235" Margin="481,52,0,0" VerticalAlignment="Top" Width="149" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Label Content="Label" Margin="10" Grid.ColumnSpan="2"/>
+        <Label Content="Label" Margin="481,10,10,0" Grid.Row="1" Grid.ColumnSpan="2" Height="37" VerticalAlignment="Top"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="481,444,0,0" Grid.Row="1" VerticalAlignment="Top" Width="149" Grid.ColumnSpan="2"/>
+        <Label Content="Label" Margin="481,292,10,0" Grid.Row="1" Height="33" VerticalAlignment="Top"/>
+        <Label Content="Label" Margin="481,330,10,0" Grid.Row="1" Height="33" VerticalAlignment="Top"/>
+        <Label Content="Label" Margin="481,368,10,0" Grid.Row="1" Height="33" VerticalAlignment="Top"/>
+        <Label Content="Label" Margin="481,406,10,0" Grid.Row="1" Height="33" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="456" Margin="10,10,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="466"/>
+
+    </Grid>
+</Window>

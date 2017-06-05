@@ -1,0 +1,17 @@
+﻿<Window x:Class="wndLogon"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:JPTC_Manager_v2___Patrick_Shaw"
+    Title="Login Screen - JPTC Manager" Height="213" Width="362">
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml"></ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Button Content="Login" Height="42" HorizontalAlignment="Right" Margin="0,120,93,0" Name="btnLogin" VerticalAlignment="Top" Width="75" IsDefault="True" />
+        <Button Content="Cancel" Height="42" HorizontalAlignment="Left" Margin="253,120,0,0" Name="btnCancel" VerticalAlignment="Top" Width="75" IsCancel="True" />
+        <Label Content="Username" Height="28" HorizontalAlignment="Left" Margin="12,54,0,0" Name="Label1" VerticalAlignment="Top" FontSize="14" Width="113" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="131,54,0,0" Name="txtUsername" VerticalAlignment="Top" Width="197" />
+        <Label Content="Password" FontSize="14" Height="28" HorizontalAlignment="Left" Margin="12,88,0,0" Name="Label2" VerticalAlignment="Top" Width="113" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="131,88,0,0" Name="txtPassword" VerticalAlignment="Top" Width="197" />
+        <Label Content="Login to JPTC Manager" FontSize="14" Height="44" HorizontalAlignment="Left" Margin="12,12,0,0" Name="Label3" VerticalAlignment="Top" Width="316" />
+    </Grid>
+</Window>

@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="ctrSession_Viewer" x:Name="ctr"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="1366" >
+    <UserControl.Resources>
+        <ResourceDictionary Source="Styles.xaml"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="173*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="685*"/>
+            <ColumnDefinition Width="681*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Button" FontSize="24" HorizontalAlignment="Left" Margin="10,625,0,0" VerticalAlignment="Top" Width="214" RenderTransformOrigin="0.493,0.4" Height="57" Grid.Row="1"/>
+        <ListBox HorizontalAlignment="Left" Height="523" Margin="10,10,0,0" VerticalAlignment="Top" Width="665" Grid.Row="1"/>
+        <Label Content="Student Averages" FontSize="36" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="665" Height="56"/>
+
+    </Grid>
+</UserControl>

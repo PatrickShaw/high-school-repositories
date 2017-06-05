@@ -1,0 +1,11 @@
+﻿<TabControl x:Class="ModuleTabControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" PreviewKeyDown="TabControl_PreviewKeyDown" AllowDrop="True"  PreviewMouseLeftButtonDown="TabControl_PreviewMouseLeftButtonDown"  Drop="TabControl_Drop" PreviewDrop="TabControl_PreviewDrop" 
+             >
+    <TabControl.Resources>
+        <ResourceDictionary Source="Styles.xaml"/>
+    </TabControl.Resources>
+</TabControl>

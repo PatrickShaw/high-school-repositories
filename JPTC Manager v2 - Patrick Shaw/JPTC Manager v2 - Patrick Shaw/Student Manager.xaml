@@ -1,0 +1,44 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:JPTC_Manager_v2___Patrick_Shaw" x:Class="Student_Manager" 
+             mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="1366"  >
+    <UserControl.Resources>
+        <ResourceDictionary Source="Styles.xaml"/>
+    </UserControl.Resources>
+    <Grid Background="#FF1C1D1B">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37"/>
+            <RowDefinition Height="19"/>
+            <RowDefinition Height="712*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1175*"/>
+            <ColumnDefinition Width="191*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer x:Name="scrollViewer" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" PanningMode="HorizontalOnly" Grid.RowSpan="2" Grid.Row="1"  >
+            <local:BrowserWrapPanel x:Name="wrpStudents" Orientation="Vertical" />
+        </ScrollViewer>
+        <TextBox x:Name="txtSearch" TextWrapping="Wrap" Text="" VerticalContentAlignment="Bottom" FontSize="18" Margin="1024,0,0,0"/>
+        <TextBlock Grid.Column="1" Margin="10,10,10,3" TextWrapping="Wrap" Text="Operations" TextAlignment="cENTER" Foreground="White" IsEnabled="False" FontSize="26" FontWeight="Bold" Grid.RowSpan="2"/>
+        <Button x:Name="btnAddStudent" Grid.Column="1" Margin="10,10,10,0" VerticalAlignment="Top" Height="80" FontSize="24" Grid.Row="2">
+            <TextBlock>
+                Add Student
+            </TextBlock>
+        </Button>
+        <Button x:Name="btnEditStudents" Grid.Column="1" Margin="10,95,10,0" VerticalAlignment="Top" Height="80" FontSize="24" Grid.Row="2">
+            <TextBlock><Run Text="Edit Students"/></TextBlock>
+        </Button>
+        <Button x:Name="btnDeleteStudents" Grid.Column="1" Margin="10,180,10,0" VerticalAlignment="Top" Height="80" FontSize="24" Grid.Row="2">
+            <TextBlock><Run Text="Delete Students"/></TextBlock>
+        </Button>
+        <Button x:Name="btnClose" Grid.Column="1" Margin="10,622,10,0" VerticalAlignment="Top" Height="80" FontSize="24" Grid.Row="2">
+            <TextBlock><Run Text="Close"/></TextBlock>
+        </Button>
+        <Button x:Name="lstOrder" Margin="868,0,0,0" FontSize="16" HorizontalAlignment="Left" Width="156">
+            <TextBlock>Order by last name</TextBlock>
+        </Button>
+    </Grid>
+</UserControl>

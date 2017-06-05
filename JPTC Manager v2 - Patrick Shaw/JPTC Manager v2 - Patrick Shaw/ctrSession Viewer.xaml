@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="ctrSession_Viewer" x:Name="ctr"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="1366" >
+    <UserControl.Resources>
+        <ResourceDictionary Source="Styles.xaml"/>
+    </UserControl.Resources>
+    <Grid Name="grdWork">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="77*" MaxHeight="77" MinHeight="77"/>
+            <RowDefinition Height="227.5*"/>
+            <RowDefinition Height="41" MinHeight="41" MaxHeight="41"/>
+            <RowDefinition Height="223.5*"/>
+            <RowDefinition Height="195.5" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="879*"/>
+            <ColumnDefinition Width="111*" />
+            <ColumnDefinition Width="115*" />
+            <ColumnDefinition Width="130.5*"/>
+            <ColumnDefinition Width="130.5*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="Quick Edit" HorizontalContentAlignment="Center" Margin="10,10,10,9" FontSize="36" Grid.Column="3" RenderTransformOrigin="0.433,-0.19" Grid.ColumnSpan="2" />
+
+
+        <Label Content="Session Viewer" HorizontalContentAlignment="Left" Margin="12,10,0,10" FontSize="36" HorizontalAlignment="Left" Width="280"/>
+        <Viewbox Grid.Row="1"  Grid.RowSpan="4" Grid.ColumnSpan="3">
+            <Grid Background="#FF160E29">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70*"/>
+                    <RowDefinition Height="621*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="Mon" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Grid.Column="0"/>
+                <Label Content="Tues" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+                <Label Content="Wed" FontSize="24"  FontWeight="Bold" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Grid.Column="2"/>
+                <Label Content="Thurs" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Grid.Column="3"/>
+                <Label Content="Fri" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Grid.Column="4"/>
+                <Label Content="Sat" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Grid.Column="5"/>
+                <Label Content="Sun" FontSize="24" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalAlignment="Top" Width="100" Grid.Column="6"/>
+                <Canvas x:Name="cvsSessions" Grid.ColumnSpan="7" Width="1104" Height="691" Background="Black" Grid.Row="1"/>
+            </Grid>
+        </Viewbox>
+        <GridSplitter Grid.Column="3" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Stretch" Width="5" Grid.RowSpan="4"/>
+        <Label Content="Students in Session" Grid.Column="3" Margin="11,10,10,0" Grid.Row="1" VerticalAlignment="Top" FontSize="24" Height="42" Grid.ColumnSpan="2" />
+        <TextBlock Text="Students outside session" TextAlignment="Center" Foreground="White" TextWrapping="Wrap" Grid.Column="3" Margin="10,10,11,0" Grid.Row="3" VerticalAlignment="Top" FontSize="24" Height="68" Grid.ColumnSpan="2" />
+        <ListBox x:Name="lstStudentsOutofSession" Grid.Column="3" Margin="9,86,11,0" Grid.Row="3" FontSize="14" SelectionMode="Multiple" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+        </ListBox>
+        <Button x:Name="btnRemoveStudents" Content="Remove students" Grid.Column="3" Margin="11,9,10,0" Grid.Row="2" VerticalAlignment="Top"  Height="30" FontSize="16" Grid.ColumnSpan="2" />
+        <Button x:Name="btnAddStudents" Content="Add students to Session" Grid.Column="3" Margin="9,6,10,0" Grid.Row="4" VerticalAlignment="Top" Height="30" FontSize="16" Grid.ColumnSpan="2" />
+        <Button x:Name="btnMoveStudents" Content="Move students to Session" Grid.Column="3" Margin="9,42,10,0" Grid.Row="4" VerticalAlignment="Top" Height="34" FontSize="16" Grid.ColumnSpan="2" />
+        <Button x:Name="btnSave" Content="Save Changes" Grid.Column="3" Margin="9,154,13,0" Grid.Row="4" FontSize="16"  Height="30" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+        <ListBox x:Name="lstStudentsInSession" Grid.Column="3" Margin="11,60,10,1" Grid.Row="1" FontSize="14" SelectionMode="Multiple" Grid.ColumnSpan="2" />
+        <Viewbox HorizontalAlignment="Left" Margin="297,10,0,0" VerticalAlignment="Top" Height="57" Width="245">
+            <DatePicker x:Name="dtpSessionDate" FirstDayOfWeek="Monday" />
+        </Viewbox>
+        <Button x:Name="btnRefresh" Content="Refresh" Margin="0,10,13,10" Height="57" FontSize="16" Grid.Column="2" />
+        <Button x:Name="btnCancelSession" HorizontalAlignment="Stretch" Content="Cancel Session" Grid.Column="3" Margin="10,81,4,0" Grid.Row="4" FontSize="16" Height="66" VerticalAlignment="Top" />
+        <Button x:Name="btnUncancelSession" HorizontalAlignment="Stretch" Content="Uncancel Session" Grid.Column="4" Margin="4,82,11,0" Grid.Row="4" FontSize="14" Height="66" VerticalAlignment="Top" />
+        <Button Content="Help" Height="55" HorizontalAlignment="Stretch" Margin="0,12,3,0" Name="btnHelp" VerticalAlignment="Top" Width="102" Grid.Column="1" />
+    </Grid>
+
+</UserControl>

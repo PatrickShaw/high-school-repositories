@@ -1,0 +1,13 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:JPTC_Manager_v2___Patrick_Shaw" x:Class="UndockedModule"
+        Title="UndockedModule" Height="300" Width="300" x:Name="theWindow" Closed="theWindow_Closed">
+    <Window.Resources>
+        <ResourceDictionary Source="Styles.xaml"/>
+    </Window.Resources>
+    <local:ModuleTabControl x:Name="theTabControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
+    </local:ModuleTabControl>
+
+</Window>
